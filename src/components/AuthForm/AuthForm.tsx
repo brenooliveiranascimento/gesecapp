@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {Alert, Text, TouchableOpacity} from 'react-native';
+import {Text, TouchableOpacity} from 'react-native';
 import {FormContainer, TexRegistertBtn} from './AuthFormComponent';
 import {
   GeneralButton,
@@ -10,7 +10,7 @@ import {
   passwordVerification,
 } from '../../services/emailAndPasswordVerificaion/emailAndPasswordVerificaion';
 import {useDispatch} from 'react-redux';
-import {registeuser} from '../../redux/actions/authActions';
+import {register_user, sigin_User} from '../../redux/actions/authActions';
 
 export default function AuthForm() {
   const dispatch = useDispatch();
@@ -24,13 +24,19 @@ export default function AuthForm() {
 
   const registerUser = () => {
     if (enable) {
-      dispatch(registeuser(userData));
+      dispatch(register_user(userData));
     } else {
-      console.log('dnwaiod');
+      console.log('Preencha todos os campos');
     }
   };
 
-  const signInUser = () => console.log('register');
+  const signInUser = () => {
+    if (enable) {
+      dispatch(sigin_User(userData.email, userData.password));
+    } else {
+      console.log('Preencha todos os campos');
+    }
+  };
 
   useEffect(() => {
     const verifyForm = () => {

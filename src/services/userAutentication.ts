@@ -7,3 +7,8 @@ export const createUserData = async (userData: userInfType) => {
     .doc(userData.uid)
     .set({...userData});
 };
+
+export const fetchUserData = async (uid: string) => {
+  const userData = await firestore().collection('users').doc(uid).get();
+  return userData.data();
+};

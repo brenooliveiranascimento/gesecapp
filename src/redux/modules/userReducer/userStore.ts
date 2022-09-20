@@ -10,7 +10,12 @@ const userInitialValue: userType = {
 export function userStore(state = userInitialValue, action: any) {
   switch (action.type) {
     case SIGIN_USER:
-      return {...state};
+      return {
+        ...state,
+        name: action.payload.name,
+        email: action.payload,
+        uid: action.payload.uid,
+      };
     case SIGNOUT_USER:
       return {...state};
     case REGISTER_USER:

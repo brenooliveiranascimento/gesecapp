@@ -1,15 +1,16 @@
-import {REGISTER_USER} from '../types/types';
+/* eslint-disable no-alert */
+import {REGISTER_USER, SIGIN_USER} from '../types/types';
 import auth from '@react-native-firebase/auth';
 import {formInfType, userInfType} from '../reduxTypes/reduxTypes';
-import {createUserData} from '../../services/userAutentication';
+import {createUserData, fetchUserData} from '../../services/userAutentication';
 import {Dispatch} from 'react';
 
-const setUserStore = (userInf: userInfType) => ({
-  type: REGISTER_USER,
+const setUserStore = (userInf: userInfType, type: string) => ({
+  type,
   payload: userInf,
 });
 
-export const registeuser = (userInf: formInfType): any => {
+export const register_user = (userInf: formInfType): any => {
   return async (dispatch: Dispatch<any>) => {
     try {
       const createAccount = await auth().createUserWithEmailAndPassword(
@@ -23,10 +24,27 @@ export const registeuser = (userInf: formInfType): any => {
         uid,
       };
       createUserData(userData);
-      console.log(userData);
-      dispatch(setUserStore(userData));
+      dispatch(setUserStore(userData, REGISTER_USER));
     } catch (error: any) {
-      console.log(error);
+      alert(error.message);
     }
   };
 };
+
+export const sigin_User = (email: string, password: string): any => {
+  return async (dispatch: Dispatch<any>) => {
+    try {
+      const sigin = await auth().signInWithEmailAndPassword(email, password);
+      const uid = await sigin.user.uid;
+      const userData: any = await fetchUserData(uid);
+      console.log(userData);
+      dispatch(setUserStore(userData, SIGIN_USER));
+    } catch (error: any) {
+      alert(error.message);
+    }
+  };
+};
+
+function alert(errorMessage: string) {
+  throw new Error(errorMessage);
+}
