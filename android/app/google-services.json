@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "334471967764",
+    "project_id": "gesec-8ce10",
+    "storage_bucket": "gesec-8ce10.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:334471967764:android:dab1893655bb6be008e301",
+        "android_client_info": {
+          "package_name": "com.gesec"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "334471967764-6fe1v1bfq7870cum3keiaa5u6gc25lb7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7vxqMMVJLon9b6DYAAejABZYsicX1FXE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "334471967764-6fe1v1bfq7870cum3keiaa5u6gc25lb7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
