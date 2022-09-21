@@ -41,13 +41,10 @@ export const addRecipe = (recipeData: any): any => {
   };
 };
 
-export const removeRecipe = (recipeData: any) => {
-  return async (dispatch: Dispatch<any>, state: any) => {
+export const removeRecipe = (recipeData: any): any => {
+  return async (dispatch: Dispatch<any>) => {
     await removeRecipeIndatabase(recipeData);
-    const removeRecipeInStore = state().recipes.filter((recipe: any) => {
-      return recipe.id !== recipeData.id;
-    });
-    dispatch(updateRecipes(removeRecipeInStore, DELET_RECIPE));
+    dispatch(updateRecipes(recipeData, DELET_RECIPE));
     try {
     } catch (error: any) {
       console.log(error.message);
