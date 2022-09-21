@@ -2,19 +2,20 @@ import styled from 'styled-components/native';
 
 export const CardContainer = styled.View`
   display: flex;
-  flex-direction: row;
   width: 100%;
-  height: auto;
+  flex-direction: row;
   flex-wrap: wrap;
-  padding: 10px;
+  height: auto;
   margin-top: 70px;
 `;
 
-export const Card = styled.TouchableOpacity`
+export const Card = styled.View`
   width: 180px;
   height: 250px;
+  margin: 5px;
   display: flex;
   flex-direction: column;
+  margin-left: 10px;
 `;
 
 export const CardImage = styled.Image`
@@ -24,4 +25,11 @@ export const CardImage = styled.Image`
 
 export const CardText = styled.Text`
   font-size: 17px;
+`;
+
+export const BtnArea = styled.View`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
 `;

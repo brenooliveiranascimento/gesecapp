@@ -8,12 +8,23 @@ import {
   MoreButton,
   RecipeInput,
 } from './CreateRecipeComponents';
+import {useDispatch} from 'react-redux';
+import {addRecipe} from '../../redux/actions/recipesActions';
 
 function CreateRecipe() {
+  const dispatch = useDispatch();
   const [newRecipe, setNewRecipe] = useState({
     name: '',
     image: '',
   });
+
+  const addNewRecipe = () => {
+    dispatch(addRecipe(newRecipe));
+    setNewRecipe({
+      name: '',
+      image: '',
+    });
+  };
 
   return (
     <CreateRecipeContainer>
@@ -26,18 +37,19 @@ function CreateRecipe() {
           placeholder="Nomde da receita"
         />
         <RecipeInput
+          value={newRecipe.image}
           onChangeText={(text: string) =>
             setNewRecipe({...newRecipe, image: text})
           }
           placeholder="Url da receita"
         />
       </InputArea>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={addNewRecipe}>
         <MoreButton>+</MoreButton>
         <Image
           style={{width: 100, height: 100}}
           source={{
-            uri: 'https://receitascluboficial.com.br/wp-content/uploads/2022/06/bolo-de-milho-cremoso-de-liquidi.webp',
+            uri: newRecipe.image,
           }}
         />
         <Add>Adicionar</Add>

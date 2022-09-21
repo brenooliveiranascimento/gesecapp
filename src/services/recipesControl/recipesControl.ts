@@ -12,11 +12,14 @@ export const fetchAllRecipes = async () => {
   }
 };
 
-export const updateRecipes = async (newRecipe: any) => {
+export const updateRecipesInDatabase = async (newRecipe: any) => {
   try {
     const requestrecipes: any = await fetchAllRecipes();
-    const addRecipe = [...requestrecipes, newRecipe];
-    await firestore().collection('recipse').doc('items').set(addRecipe);
+    const addRecipe = {
+      recipes: [...requestrecipes, newRecipe],
+    };
+    console.log(addRecipe);
+    await firestore().collection('recipes').doc('items').set(addRecipe);
   } catch (error: any) {
     console.log(error.message);
   }
