@@ -1,12 +1,18 @@
-import {Text, View} from 'react-native';
-import React, {Component} from 'react';
+/* eslint-disable react/react-in-jsx-scope */
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import Auth from '../pages/Auth/Auths';
 
-export default class AuthRoutes extends Component {
-  render() {
-    return (
-      <View>
-        <Text>AuthRoutes</Text>
-      </View>
-    );
-  }
+export default function AuthRoutes() {
+  const Stack = createNativeStackNavigator();
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        options={{
+          headerShown: false,
+        }}
+        name="Auths Form"
+        component={Auth}
+      />
+    </Stack.Navigator>
+  );
 }
