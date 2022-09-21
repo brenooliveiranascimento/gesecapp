@@ -15,3 +15,9 @@ export interface formInfType {
   password: string;
   name: string;
 }
+
+export interface recipesTypes {
+  id: number;
+  name: string;
+  image: string;
+}

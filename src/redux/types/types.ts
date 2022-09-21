@@ -1,3 +1,6 @@
 export const REGISTER_USER = 'REGISTER_USER';
 export const SIGIN_USER = 'SIGIN_USER';
 export const SIGNOUT_USER = 'SIGNOUT_USER';
+export const UPDATE_RECIPES = 'UPDATE_RECIPES';
+export const REQUEST_RECIPES = 'REQUEST_RECIPES';
+export const DELET_RECIPE = 'DELET_RECIPE';
