@@ -32,5 +32,6 @@ export const GeneralButton = styled.TouchableOpacity`
   justify-content: center;
   border-radius: 6px;
   margin-top: 10px;
-  background-color: #6495ed;
+  color: ${({enabled}) => (enabled ? '#fff' : '#ddd')};
+  background-color: ${({enabled}) => (enabled ? '#6495ed' : '#486ba8')};
 `;

@@ -1,8 +1,10 @@
-/* eslint-disable no-alert */
 import {REGISTER_USER, SIGIN_USER} from '../types/types';
 import auth from '@react-native-firebase/auth';
 import {formInfType, userInfType} from '../reduxTypes/reduxTypes';
-import {createUserData, fetchUserData} from '../../services/userAutentication';
+import {
+  registerUserInDatabase,
+  fetchUserData,
+} from '../../services/userAutentication';
 import {Dispatch} from 'react';
 
 const setUserStore = (userInf: userInfType, type: string) => ({
@@ -23,7 +25,7 @@ export const register_user = (userInf: formInfType): any => {
         email: userInf.email,
         uid,
       };
-      createUserData(userData);
+      registerUserInDatabase(userData);
       dispatch(setUserStore(userData, REGISTER_USER));
     } catch (error: any) {
       alert(error.message);
@@ -37,7 +39,6 @@ export const sigin_User = (email: string, password: string): any => {
       const sigin = await auth().signInWithEmailAndPassword(email, password);
       const uid = await sigin.user.uid;
       const userData: any = await fetchUserData(uid);
-      console.log(userData);
       dispatch(setUserStore(userData, SIGIN_USER));
     } catch (error: any) {
       alert(error.message);

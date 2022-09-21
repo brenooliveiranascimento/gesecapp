@@ -76,8 +76,16 @@ export default function AuthForm() {
         }
         placeholder="Senha"
       />
-      <GeneralButton onPress={() => (register ? registerUser() : signInUser())}>
-        <TexRegistertBtn>{register ? 'Registrar' : 'Entrar'}</TexRegistertBtn>
+      <GeneralButton
+        enabled={enable}
+        onPress={() => (register ? registerUser() : signInUser())}>
+        <TexRegistertBtn>
+          {enable
+            ? register
+              ? 'Registrar'
+              : 'Entrar'
+            : 'preencha todos os campos'}
+        </TexRegistertBtn>
       </GeneralButton>
       <TouchableOpacity
         onPress={() => setRegister(!register)}
