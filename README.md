@@ -29,8 +29,6 @@
    caso tenha problemas para executar os testes, entre no arquivo .detoxrc.json que se encontra na raiz do projeto e substitua o nome da chave
    avdName que por padado deixei Pixel_3a_API_30 e coloque o nome device que voce está utilizando, lembre-se de substituir todos os espaços por _
    
-  
-
 
 Tecnologias utilizadas:<br/>
 <a href="https://www.javascript.com/"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg" width=30 height=30></a>
