@@ -45,10 +45,12 @@ function RecipesCard({recipe, index}: any) {
       {inEdit ? (
         <View>
           <EditNameInput
+            testID={`alter-name-${index}`}
             onChangeText={(text: string) => setNowName(text)}
             value={nowName}
           />
           <EditNameInput
+            testID={`alter-url-${index}`}
             onChangeText={(text: string) => setNowUrl(text)}
             value={nowUrl}
           />
@@ -59,6 +61,7 @@ function RecipesCard({recipe, index}: any) {
       {userData === recipe.uid && (
         <BtnArea>
           <BtnAlter
+            testID={`edit-${index}`}
             onPress={() => {
               if (inEdit) {
                 return saveEdit();
@@ -78,6 +81,7 @@ function RecipesCard({recipe, index}: any) {
             style={{
               backgroundColor: inEdit ? 'red' : 'white',
             }}
+            testID={`delet-${index}`}
             onPress={() => (inEdit ? setEdit(false) : remove())}>
             <Text
               style={{

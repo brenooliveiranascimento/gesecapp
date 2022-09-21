@@ -58,6 +58,7 @@ export default function AuthForm() {
       <Text style={{fontSize: 20, fontWeight: '900'}}>GesecApp</Text>
       {register && (
         <GeneralInput
+          testID="name"
           value={userData.name}
           onChangeText={(text: string) =>
             setUserData({...userData, name: text})
@@ -66,12 +67,14 @@ export default function AuthForm() {
         />
       )}
       <GeneralInput
+        testID="email"
         value={userData.email}
         onChangeText={(text: string) => setUserData({...userData, email: text})}
         placeholder="Email"
       />
       <GeneralInput
         value={userData.password}
+        testID="senha"
         onChangeText={(text: string) =>
           setUserData({...userData, password: text})
         }
@@ -80,7 +83,7 @@ export default function AuthForm() {
       <GeneralButton
         enabled={enable}
         onPress={() => (register ? registerUser() : signInUser())}>
-        <TexRegistertBtn>
+        <TexRegistertBtn testID="logar">
           {enable
             ? register
               ? 'Registrar'
