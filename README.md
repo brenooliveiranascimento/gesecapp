@@ -12,7 +12,7 @@
   ### <h1>Para Rodar na sua máquina<h1>
   Necessario ter o AndroidSturio e Java versão 8 ou superior
   - Clone o repositorio
-  - Abre o terminal e navegue até a pasta raiz do app
+  - Abra o terminal e navegue até a pasta raiz do app
   - Execute o comando npm install
   - Caso ocorra algum erro execute npm install --force
   - Rode o comando npx react-native run-android
