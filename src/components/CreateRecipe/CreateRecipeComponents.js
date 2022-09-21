@@ -19,7 +19,7 @@ export const RecipeInput = styled.TextInput`
   align-self: flex-end;
   height: 40px;
   margin-top: 10px;
-  padding-bottom: -20;
+  padding-bottom: -20px;
   background-color: rgba(0, 0, 0, 0);
   border-top-width: 0px;
   border-left-width: 0px;
@@ -31,9 +31,9 @@ export const RecipeInput = styled.TextInput`
 export const MoreButton = styled.Text`
   font-size: 40px;
   position: absolute;
-  top: 25;
+  top: 25px;
   z-index: 99;
-  left: 40;
+  left: 40px;
 `;
 
 export const Add = styled.Text`

@@ -54,7 +54,8 @@ export default function AuthForm() {
 
   return (
     <FormContainer>
-      <Text style={{fontSize: 30, fontWeight: '900'}}>GesecApp</Text>
+      <Text style={{fontSize: 30, fontWeight: '900'}}>Receitas inusitadas</Text>
+      <Text style={{fontSize: 20, fontWeight: '900'}}>GesecApp</Text>
       {register && (
         <GeneralInput
           value={userData.name}
@@ -91,7 +92,7 @@ export default function AuthForm() {
         onPress={() => setRegister(!register)}
         style={{marginTop: 20}}>
         <Text style={{fontSize: 18, fontWeight: 'bold'}}>
-          {register ? 'Criar conta' : 'Já possuo conta'}
+          {register ? 'Criar uma conta' : 'Criar conta'}
         </Text>
       </TouchableOpacity>
     </FormContainer>

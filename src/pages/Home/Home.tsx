@@ -21,6 +21,8 @@ export default function Home() {
     dispatch(initRecipeRequest());
   }, []);
 
+  const close = () => setAddRecipe(false);
+
   return (
     <HomeContainer>
       <GeneralButton
@@ -30,12 +32,12 @@ export default function Home() {
           {addRecipe ? 'Cancelar' : 'Nova Receita'}
         </Text>
       </GeneralButton>
-      {addRecipe && <CreateRecipe />}
+      {addRecipe && <CreateRecipe close={close} />}
       <ScrollView>
         <CardContainer>
           {allRecipes &&
-            allRecipes.map((recipe: recipesTypes) => (
-              <RecipesCard recipe={recipe} />
+            allRecipes.map((recipe: recipesTypes, index: number) => (
+              <RecipesCard key={recipe.id} recipe={recipe} index={index} />
             ))}
         </CardContainer>
       </ScrollView>

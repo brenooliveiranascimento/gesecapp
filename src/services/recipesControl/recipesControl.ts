@@ -18,7 +18,31 @@ export const updateRecipesInDatabase = async (newRecipe: any) => {
     const addRecipe = {
       recipes: [...requestrecipes, newRecipe],
     };
-    console.log(addRecipe);
+    await firestore().collection('recipes').doc('items').set(addRecipe);
+  } catch (error: any) {
+    console.log(error.message);
+  }
+};
+
+export const removeRecipeIndatabase = async (nowRecipe: any) => {
+  try {
+    const requestrecipes: any = await fetchAllRecipes();
+    const removeItem = {
+      recipes: await requestrecipes.filter((recipe: any) => {
+        return recipe.id !== nowRecipe.id;
+      }),
+    };
+    await firestore().collection('recipes').doc('items').set(removeItem);
+  } catch (error: any) {
+    console.log(error.message);
+  }
+};
+
+export const editRecipeInDatabase = async (newList: any) => {
+  try {
+    const addRecipe = {
+      recipes: newList,
+    };
     await firestore().collection('recipes').doc('items').set(addRecipe);
   } catch (error: any) {
     console.log(error.message);
