@@ -1,4 +1,9 @@
-import {DELET_RECIPE, REQUEST_RECIPES, UPDATE_RECIPES} from '../../types/types';
+import {
+  DELET_RECIPE,
+  EDIT_RECIPE,
+  REQUEST_RECIPES,
+  UPDATE_RECIPES,
+} from '../../types/types';
 
 const stateInitialValue: any = {
   recipes: [{id: 0, name: 'abacate com chocolate', image: ''}],
@@ -17,6 +22,8 @@ export function recipesReducer(state = stateInitialValue, action: any) {
           (recipe: any) => recipe.id !== action.payload.id,
         ),
       };
+    case EDIT_RECIPE:
+      return {...state, recipes: action.payload};
     default:
       return {...state};
   }

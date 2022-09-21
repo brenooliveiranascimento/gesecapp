@@ -18,6 +18,8 @@ function CreateRecipe() {
     image: '',
   });
   const [showAlert, setShowAlert] = useState(false);
+  const questionUrl =
+    'https://firebasestorage.googleapis.com/v0/b/drawning-station.appspot.com/o/Interrogacao.jpg?alt=media&token=3e00c7a5-23a5-41e2-8c10-4c1b2f948bb8';
 
   const addNewRecipe = () => {
     if (newRecipe.name) {
@@ -59,7 +61,7 @@ function CreateRecipe() {
         <Image
           style={{width: 100, height: 100}}
           source={{
-            uri: newRecipe.image ? newRecipe.image : 'Receita',
+            uri: newRecipe.image ? newRecipe.image : questionUrl,
           }}
         />
         <Add>Adicionar</Add>

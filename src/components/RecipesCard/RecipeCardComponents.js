@@ -31,5 +31,18 @@ export const BtnArea = styled.View`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
+`;
+
+export const BtnAlter = styled.TouchableOpacity`
+  margin: 10px;
+  padding: 2px;
+  border: 1px solid black;
+  border-radius: 5px;
+`;
+
+export const EditNameInput = styled.TextInput`
+  width: 150px;
+  height: 30px;
+  padding-bottom: -10px;
 `;

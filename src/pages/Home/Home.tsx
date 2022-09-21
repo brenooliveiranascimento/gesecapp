@@ -34,8 +34,8 @@ export default function Home() {
       <ScrollView>
         <CardContainer>
           {allRecipes &&
-            allRecipes.map((recipe: recipesTypes) => (
-              <RecipesCard key={recipe.id} recipe={recipe} />
+            allRecipes.map((recipe: recipesTypes, index: number) => (
+              <RecipesCard key={recipe.id} recipe={recipe} index={index} />
             ))}
         </CardContainer>
       </ScrollView>
