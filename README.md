@@ -2,7 +2,7 @@
 ## App de receitas inusitada!
 
    ### Sobre o App
-  Venha e registre alguma receita no mínimo inusitada!
+  Venha e registre alguma receita esquisita!
   Nesta aplicação é possivél editar e excluir apenas as suas próprias receitas.
   
  
