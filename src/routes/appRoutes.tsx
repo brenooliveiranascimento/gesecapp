@@ -1,12 +1,20 @@
-import {Text, View} from 'react-native';
-import React, {Component} from 'react';
+import React from 'react';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import Home from '../pages/Home/Home';
 
-export default class AppRoutes extends Component {
-  render() {
-    return (
-      <View>
-        <Text>appRoutes</Text>
-      </View>
-    );
-  }
+function AppRoutes() {
+  const Stack = createNativeStackNavigator();
+  return (
+    <Stack.Navigator>
+      <Stack.Screen
+        options={{
+          headerShown: false,
+        }}
+        name="Auths Form"
+        component={Home}
+      />
+    </Stack.Navigator>
+  );
 }
+
+export default AppRoutes;
