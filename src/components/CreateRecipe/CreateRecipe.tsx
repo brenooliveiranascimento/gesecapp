@@ -11,7 +11,7 @@ import {
 import {useDispatch} from 'react-redux';
 import {addRecipe} from '../../redux/actions/recipesActions';
 
-function CreateRecipe() {
+function CreateRecipe({close}: any) {
   const dispatch = useDispatch();
   const [newRecipe, setNewRecipe] = useState({
     name: '',
@@ -29,6 +29,7 @@ function CreateRecipe() {
         image: '',
       });
       setShowAlert(false);
+      close();
       return;
     }
     setShowAlert(true);
