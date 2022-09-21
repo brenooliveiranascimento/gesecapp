@@ -7,7 +7,8 @@
   
   ## <a target="_blank" href="https://www.youtube.com/watch?v=OekaJljtMGg">Video de apresentação do projeto</a>
   ## Credenciais para recrutadores
-  Isso é apenas para facilitar a entrada no app, fiquem a vontade para criar uma novas contas :)
+  Isso é apenas para facilitar a entrada no app pois essa conta já possui uma publicação feita sendo possivél assim editar ou excluir a mesma. Fiquem a     vontade para criar uma novas contas :)
+  
   - email: gesec@gmail.com
   - senha: 123123
   
