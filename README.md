@@ -27,7 +27,7 @@
    ## Testes
    Utilizei o detox para realizar os testes, para roda-lo utilize o app precisa estar em execução, logo após executar
    o app com npm start 
-   - Rode o comando "yarn detox build -c android.emu.debug" ou "npx detox build -c android.emu.debug" e aguarde a criação do apk
+   - Rode o comando "yarn detox build -c android.emu.debug" ou "npx detox build -c android.emu.debug" na pasta raiz e aguarde a criação do apk
    - Rode o comando "npx detox test -c android.emu.debug" ou "yarn detox test -c android.emu.debug"
    ### IMPORTANTE
    caso tenha problemas para executar os testes, entre no arquivo .detoxrc.json que se encontra na raiz do projeto e substitua o nome da chave
