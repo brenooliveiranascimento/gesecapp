@@ -8,9 +8,8 @@ export const CardContainer = styled.View`
   margin-top: 10px;
 `;
 
-export const Card = styled.View`
+export const Card = styled.TouchableOpacity`
   width: 180px;
-  background-color: aqua;
   height: 250px;
   display: flex;
   flex-direction: column;
