@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
-import React from 'react';
-import {Image, Text, TouchableOpacity} from 'react-native';
+import React, {useState} from 'react';
+import {Image, TouchableOpacity} from 'react-native';
 import {
   Add,
   CreateRecipeContainer,
@@ -10,11 +10,27 @@ import {
 } from './CreateRecipeComponents';
 
 function CreateRecipe() {
+  const [newRecipe, setNewRecipe] = useState({
+    name: '',
+    image: '',
+  });
+
   return (
     <CreateRecipeContainer>
       <InputArea>
-        <RecipeInput placeholder="Nomde da receita" />
-        <RecipeInput placeholder="Url da receita" />
+        <RecipeInput
+          value={newRecipe.name}
+          onChangeText={(text: string) =>
+            setNewRecipe({...newRecipe, name: text})
+          }
+          placeholder="Nomde da receita"
+        />
+        <RecipeInput
+          onChangeText={(text: string) =>
+            setNewRecipe({...newRecipe, image: text})
+          }
+          placeholder="Url da receita"
+        />
       </InputArea>
       <TouchableOpacity>
         <MoreButton>+</MoreButton>

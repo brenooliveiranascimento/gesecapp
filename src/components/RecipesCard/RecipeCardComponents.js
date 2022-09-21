@@ -3,9 +3,11 @@ import styled from 'styled-components/native';
 export const CardContainer = styled.View`
   display: flex;
   flex-direction: row;
+  width: 100%;
+  height: auto;
   flex-wrap: wrap;
   padding: 10px;
-  margin-top: 10px;
+  margin-top: 70px;
 `;
 
 export const Card = styled.TouchableOpacity`

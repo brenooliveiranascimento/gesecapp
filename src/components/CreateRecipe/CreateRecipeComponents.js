@@ -19,6 +19,7 @@ export const RecipeInput = styled.TextInput`
   align-self: flex-end;
   height: 40px;
   margin-top: 10px;
+  padding-bottom: -20;
   background-color: rgba(0, 0, 0, 0);
   border-top-width: 0px;
   border-left-width: 0px;
