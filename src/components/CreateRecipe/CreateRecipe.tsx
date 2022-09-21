@@ -39,6 +39,7 @@ function CreateRecipe({close}: any) {
     <CreateRecipeContainer>
       <InputArea>
         <RecipeInput
+          testID="name-recipe"
           value={newRecipe.name}
           onChangeText={(text: string) => {
             setNewRecipe({...newRecipe, name: text});
@@ -50,6 +51,7 @@ function CreateRecipe({close}: any) {
           placeholder={showAlert ? 'Digite um nome!!' : 'Nomde da receita'}
         />
         <RecipeInput
+          testID="url-recipe"
           value={newRecipe.image}
           onChangeText={(text: string) =>
             setNewRecipe({...newRecipe, image: text})
@@ -57,7 +59,7 @@ function CreateRecipe({close}: any) {
           placeholder="Url da receita"
         />
       </InputArea>
-      <TouchableOpacity onPress={addNewRecipe}>
+      <TouchableOpacity testID="add-recipe" onPress={addNewRecipe}>
         <MoreButton>+</MoreButton>
         <Image
           style={{width: 100, height: 100}}
