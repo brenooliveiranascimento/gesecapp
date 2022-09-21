@@ -1,18 +1,18 @@
 # gesecapp
 ## App de receitas inusitada!
 
+   ### Sobre o App
+  Venha e registre alguma receita no mínimo inusitada!
+  Nesta aplicação é possivél editar e excluir apenas as suas próprias receitas.
+  
  
-  ### <h1>Aprendizado<h1>
+  ### Aprendizado
   Neste Projeto fui capaz de:
   - Criar um sistema de login e cadastro com Firebase e React Native
   - Criar um CRUD com Firebase
   - Controlar o estado global da plicação com Redux e Redux Thunk para assincronicidade
   
-  Venha e registre alguma receita no mínimo inusitada!
-  Nesta aplicação é possivél editar e excluir apenas as suas próprias receitas.
-  
-  
-  ### <h1>Para Rodar na sua máquina<h1>
+  ## Para Rodar na sua máquina
   Necessario ter o AndroidSturio e Java versão 8 ou superior
   - Clone o repositorio
   - Abra o terminal e navegue até a pasta raiz do app
