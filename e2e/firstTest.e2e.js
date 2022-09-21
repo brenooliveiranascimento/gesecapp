@@ -34,6 +34,6 @@ describe('Test SignIn', () => {
 
   it('Uruário deleta a nova receita', async () => {
     await expect(element(by.text('hamburguer de miojo'))).toBeVisible();
-    await element(by.id('delet-2')).tap();
+    await element(by.id('delet-hamburguer')).tap();
   });
 });

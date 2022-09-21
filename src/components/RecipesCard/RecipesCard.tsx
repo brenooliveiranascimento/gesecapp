@@ -81,7 +81,7 @@ function RecipesCard({recipe, index}: any) {
             style={{
               backgroundColor: inEdit ? 'red' : 'white',
             }}
-            testID={`delet-${index}`}
+            testID={`delet-${recipe.name.split(' ')[0]}`}
             onPress={() => (inEdit ? setEdit(false) : remove())}>
             <Text
               style={{
