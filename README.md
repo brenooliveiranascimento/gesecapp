@@ -11,6 +11,7 @@
   - Criar um sistema de login e cadastro com Firebase e React Native
   - Criar um CRUD com Firebase
   - Controlar o estado global da plicação com Redux e Redux Thunk para assincronicidade
+  - Permitir que apenas os donos da receita possam editar e deletar as próprias publicações
   
   ## Para Rodar na sua máquina
   Necessario ter o AndroidSturio e Java versão 8 ou superior
