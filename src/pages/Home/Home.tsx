@@ -35,7 +35,7 @@ export default function Home() {
         <CardContainer>
           {allRecipes &&
             allRecipes.map((recipe: recipesTypes) => (
-              <RecipesCard recipe={recipe} />
+              <RecipesCard key={recipe.id} recipe={recipe} />
             ))}
         </CardContainer>
       </ScrollView>

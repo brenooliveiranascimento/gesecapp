@@ -17,13 +17,19 @@ function CreateRecipe() {
     name: '',
     image: '',
   });
+  const [showAlert, setShowAlert] = useState(false);
 
   const addNewRecipe = () => {
-    dispatch(addRecipe(newRecipe));
-    setNewRecipe({
-      name: '',
-      image: '',
-    });
+    if (newRecipe.name) {
+      dispatch(addRecipe(newRecipe));
+      setNewRecipe({
+        name: '',
+        image: '',
+      });
+      setShowAlert(false);
+      return;
+    }
+    setShowAlert(true);
   };
 
   return (
@@ -31,10 +37,14 @@ function CreateRecipe() {
       <InputArea>
         <RecipeInput
           value={newRecipe.name}
-          onChangeText={(text: string) =>
-            setNewRecipe({...newRecipe, name: text})
-          }
-          placeholder="Nomde da receita"
+          onChangeText={(text: string) => {
+            setNewRecipe({...newRecipe, name: text});
+            setShowAlert(false);
+          }}
+          style={{
+            borderBottomColor: showAlert ? 'red' : 'black',
+          }}
+          placeholder={showAlert ? 'Digite um nome!!' : 'Nomde da receita'}
         />
         <RecipeInput
           value={newRecipe.image}
@@ -49,7 +59,7 @@ function CreateRecipe() {
         <Image
           style={{width: 100, height: 100}}
           source={{
-            uri: newRecipe.image,
+            uri: newRecipe.image ? newRecipe.image : 'Receita',
           }}
         />
         <Add>Adicionar</Add>

@@ -11,7 +11,7 @@ export const CardContainer = styled.View`
 
 export const Card = styled.View`
   width: 180px;
-  height: 250px;
+  min-height: 270px;
   margin: 5px;
   display: flex;
   flex-direction: column;

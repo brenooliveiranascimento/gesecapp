@@ -5,6 +5,7 @@ import {store} from './src/redux/store';
 import Routes from './src/routes';
 
 export default function App() {
+  console.ignoredYellowBox = ['Warning: Each', 'Warning: Failed'];
   return (
     <NavigationContainer>
       <Provider store={store}>

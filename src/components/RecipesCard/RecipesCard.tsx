@@ -9,7 +9,7 @@ function RecipesCard({recipe}: any) {
   const dispatch = useDispatch();
   const userData = useSelector(({userStore}: any) => userStore.uid);
   const questionUrl =
-    'https://firebasestorage.googleapis.com/v0/b/drawning-station.appspot.com/o/question-mark-png-5a3a85e2667e64.6782850215137848024198.jpg?alt=media&token=3a62355a-01f4-4aac-92e2-1a4a51dea970';
+    'https://firebasestorage.googleapis.com/v0/b/drawning-station.appspot.com/o/Interrogacao.jpg?alt=media&token=3e00c7a5-23a5-41e2-8c10-4c1b2f948bb8';
 
   const remove = () => {
     dispatch(removeRecipe(recipe));
