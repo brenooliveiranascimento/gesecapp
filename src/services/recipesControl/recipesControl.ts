@@ -24,3 +24,17 @@ export const updateRecipesInDatabase = async (newRecipe: any) => {
     console.log(error.message);
   }
 };
+
+export const removeRecipeIndatabase = async (nowRecipe: any) => {
+  try {
+    const requestrecipes: any = await fetchAllRecipes();
+    const removeItem = {
+      recipes: await requestrecipes.filter((recipe: any) => {
+        return recipe.id !== nowRecipe.id;
+      }),
+    };
+    await firestore().collection('recipes').doc('items').set(removeItem);
+  } catch (error: any) {
+    console.log(error.message);
+  }
+};
