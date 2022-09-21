@@ -17,5 +17,7 @@ export function recipesReducer(state = stateInitialValue, action: any) {
           (recipe: any) => recipe.id !== action.payload.id,
         ),
       };
+    default:
+      return {...state};
   }
 }

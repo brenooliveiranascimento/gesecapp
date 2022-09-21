@@ -2,8 +2,11 @@ import firestore from '@react-native-firebase/firestore';
 
 export const fetchAllRecipes = async () => {
   try {
-    const requestrecipes = await firestore().collection('recipes').doc('items');
-    return await requestrecipes.get();
+    const requestrecipes: any = await firestore()
+      .collection('recipes')
+      .doc('items')
+      .get();
+    return await requestrecipes.data().recipes;
   } catch (error: any) {
     console.log(error);
   }

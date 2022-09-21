@@ -11,6 +11,7 @@ export const initRecipeRequest = (): any => {
   return async (dispatch: Dispatch<any>) => {
     try {
       const getRecipes = await fetchAllRecipes();
+      console.log(getRecipes);
       dispatch(updateRecipes(getRecipes, REQUEST_RECIPES));
     } catch (error: any) {
       console.log(error);
