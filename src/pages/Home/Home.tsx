@@ -1,9 +1,11 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import {View, Text} from 'react-native';
+import {View} from 'react-native';
 import React, {useEffect} from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {initRecipeRequest} from '../../redux/actions/recipesActions';
 import {recipesTypes} from '../../redux/reduxTypes/reduxTypes';
+import {CardContainer} from '../../components/RecipesCard/RecipeCardComponents';
+import RecipesCard from '../../components/RecipesCard/RecipesCard';
 
 export default function Home() {
   const dispatch = useDispatch();
@@ -17,12 +19,12 @@ export default function Home() {
 
   return (
     <View>
-      {allRecipes &&
-        allRecipes.map((recipe: recipesTypes) => (
-          <View>
-            <Text>{recipe.name}</Text>
-          </View>
-        ))}
+      <CardContainer>
+        {allRecipes &&
+          allRecipes.map((recipe: recipesTypes) => (
+            <RecipesCard recipe={recipe} />
+          ))}
+      </CardContainer>
     </View>
   );
 }

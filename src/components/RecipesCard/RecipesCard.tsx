@@ -1,11 +1,12 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {Card, CardImage, CardText} from './RecipeCardComponents';
 
-function RecipesCard() {
+function RecipesCard({recipe}: any) {
   return (
-    <View>
-      <Text>RecipeCard</Text>
-    </View>
+    <Card>
+      <CardImage />
+      <CardText>{recipe.name}</CardText>
+    </Card>
   );
 }
 
