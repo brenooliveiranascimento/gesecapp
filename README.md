@@ -6,6 +6,10 @@
   Nesta aplicação é possivél editar e excluir apenas as suas próprias receitas.
   
   ## <a target="_blank" href="https://www.youtube.com/watch?v=OekaJljtMGg">Video de apresentação do projeto</a>
+  ## Credenciais para recrutadores
+  Isso é apenas para facilitar a entrada no app, fiquem a vontade para criar uma novas contas :)
+  - email: gesec@gmail.com
+  - senha: 123123
   
  
   ### Aprendizado
