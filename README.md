@@ -8,6 +8,9 @@
   - Criar um CRUD com Firebase
   - Controlar o estado global da plicação com Redux e Redux Thunk para assincronicidade
   
+  Venha e registre alguma receita no mínimo inusitada!
+  Nesta aplicação é possivél editar e excluir apenas as suas próprias receitas.
+  
   
   ### <h1>Para Rodar na sua máquina<h1>
   Necessario ter o AndroidSturio e Java versão 8 ou superior
